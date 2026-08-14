@@ -57278,18 +57278,8 @@ __name(fromURL, "fromURL");
 // providers/providerContext.ts
 var providerContext = {
   axios: axios_default,
+  Aes: null,
   commonHeaders: headers,
-  // webview not aviable in local test only avaiable in app
-  openWebView: /* @__PURE__ */ __name((url2, options) => {
-    return Promise.resolve({
-      success: false,
-      data: "",
-      cookies: "",
-      cookieMap: {},
-      userAgent: "",
-      url: url2
-    });
-  }, "openWebView"),
   cheerio: esm_exports4
 };
 // Annotate the CommonJS export names for ESM import in node:
