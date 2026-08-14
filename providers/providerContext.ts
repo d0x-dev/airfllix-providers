@@ -5,17 +5,7 @@ import { ProviderContext } from "./types";
 
 export const providerContext: ProviderContext = {
   axios,
+  Aes: null,
   commonHeaders: headers,
-  // webview not aviable in local test only avaiable in app
-  openWebView: (url: string, options?: any) => {
-    return Promise.resolve({
-      success: false,
-      data: "",
-      cookies: "",
-      cookieMap: {},
-      userAgent: "",
-      url: url,
-    } as import("./types").OpenWebViewResult);
-  },
   cheerio,
 };
