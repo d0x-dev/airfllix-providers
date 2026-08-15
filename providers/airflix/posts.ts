@@ -37,13 +37,13 @@ export const getPosts = async ({
   providerContext: ProviderContext;
 }): Promise<Post[]> => {
   const { axios, cheerio } = providerContext;
-  const baseUrl = await getBaseUrl("airfllix");
+  const baseUrl = await getBaseUrl("airflix");
 
-  console.log("airfllixGetPosts baseUrl:", providerValue, baseUrl);
+  console.log("airflixGetPosts baseUrl:", providerValue, baseUrl);
   const url = filter
     ? `${baseUrl}/${filter}/page/${page}/`
     : `${baseUrl}/page/${page}/`;
-  console.log("airfllixGetPosts url:", url);
+  console.log("airflixGetPosts url:", url);
   return posts(baseUrl, url, signal, headers, axios, cheerio);
 };
 
@@ -61,11 +61,11 @@ export const getSearchPosts = async ({
   providerContext: ProviderContext;
 }): Promise<Post[]> => {
   const { axios, cheerio } = providerContext;
-  const baseUrl = await getBaseUrl("airfllix");
+  const baseUrl = await getBaseUrl("airflix");
 
-  console.log("airfllixGetPosts baseUrl:", providerValue, baseUrl);
+  console.log("airflixGetPosts baseUrl:", providerValue, baseUrl);
   const url = `${baseUrl}/search.php?q=${searchQuery}&page=${page}`;
-  console.log("airfllixGetPosts url:", url);
+  console.log("airflixGetPosts url:", url);
 
   try {
     const response = await axios.get(url, {
@@ -93,7 +93,7 @@ export const getSearchPosts = async ({
     }
     return posts;
   } catch (error) {
-    throwProviderError("airfllix", "search posts", error);
+    throwProviderError("airflix", "search posts", error);
   }
 };
 
@@ -153,13 +153,13 @@ async function posts(
         if (post.image.startsWith("//")) {
           post.image = "https:" + post.image;
         }
-        console.log("airfllixGetPosts post:", post);
+        console.log("airflixGetPosts post:", post);
         posts.push(post);
       });
 
     // console.log(posts);
     return posts;
   } catch (error) {
-    throwProviderError("airfllix", "posts", error);
+    throwProviderError("airflix", "posts", error);
   }
 }

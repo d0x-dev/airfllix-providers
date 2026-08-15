@@ -1,5 +1,5 @@
 const urlsEndpoint =
-  "https://raw.githubusercontent.com/d0x-dev/airfllix-providers/refs/heads/main/urls.json";
+  "https://raw.githubusercontent.com/d0x-dev/airflix-providers/refs/heads/main/urls.json";
 const cacheTtl = 60 * 60 * 1000;
 
 type ProviderUrls = Record<string, { url: string }>;
@@ -11,7 +11,7 @@ type BaseUrlCache = {
 };
 
 type ProviderState = {
-  __airfllixProviderBaseUrlCache__?: BaseUrlCache;
+  __airflixProviderBaseUrlCache__?: BaseUrlCache;
 };
 
 declare const providerGlobal: ProviderState | undefined;
@@ -22,8 +22,8 @@ function getCache(): BaseUrlCache {
       ? providerGlobal
       : (globalThis as typeof globalThis & ProviderState);
 
-  state.__airfllixProviderBaseUrlCache__ ??= { expiresAt: 0 };
-  return state.__airfllixProviderBaseUrlCache__;
+  state.__airflixProviderBaseUrlCache__ ??= { expiresAt: 0 };
+  return state.__airflixProviderBaseUrlCache__;
 }
 
 async function fetchProviderUrls(): Promise<ProviderUrls> {

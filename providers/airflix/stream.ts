@@ -109,6 +109,6 @@ export async function getStream({
 
     return await hubcloudExtractor(link, signal, axios, cheerio, commonHeaders);
   } catch (error: any) {
-    throwProviderError("airfllix", "stream", error);
+    throwProviderError("airflix", "stream", error);
   }
 }

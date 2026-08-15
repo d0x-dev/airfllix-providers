@@ -1,6 +1,6 @@
-# Airfllix App Provider Extensions
+# Airflix App Provider Extensions
 
-Welcome to the Airfllix App Provider Template! This repository provides the structure and tools you need to create custom providers (extensions) for the Airfllix App.
+Welcome to the Airflix App Provider Template! This repository provides the structure and tools you need to create custom providers (extensions) for the Airflix App.
 
 ## Getting Started
 
@@ -8,13 +8,13 @@ Follow these steps to create your own providers:
 
 ### 1. Fork this Repository
 Click the "Fork" button at the top right of this page to create your own copy of this repository.
-**Recommended:** Name your forked repository exactly `airfllix-providers`. This makes it easier to add your providers to the Airfllix app later!
+**Recommended:** Name your forked repository exactly `airflix-providers`. This makes it easier to add your providers to the Airflix app later!
 
 ### 2. Clone Your Fork
 Clone your newly forked repository to your local machine:
 ```sh
-git clone https://github.com/YOUR_USERNAME/airfllix-providers.git
-cd airfllix-providers
+git clone https://github.com/YOUR_USERNAME/airflix-providers.git
+cd airflix-providers
 npm install
 ```
 
@@ -31,9 +31,9 @@ npm run build
 Make sure to commit and push the built files to your GitHub repository so the app can fetch them.
 
 ### 5. Use It In The App
-To install your custom provider in the Airfllix app:
+To install your custom provider in the Airflix app:
 1. Open the app and navigate to the Extensions/Providers settings.
-2. If you named your repository exactly `airfllix-providers`, simply enter your **GitHub Username**.
+2. If you named your repository exactly `airflix-providers`, simply enter your **GitHub Username**.
 3. If you used a different name, you must enter the **Full Repository URL** (e.g., `https://github.com/YOUR_USERNAME/your-repo-name`).
 
 ---
@@ -56,7 +56,7 @@ providers/
 
 ### 0. `manifest.json`
 
-The `manifest.json` file located in the root of the repository defines the metadata for all providers included in your repository. The Airfllix app reads this manifest to discover, display, and configure your providers.
+The `manifest.json` file located in the root of the repository defines the metadata for all providers included in your repository. The Airflix app reads this manifest to discover, display, and configure your providers.
 
 **Example `manifest.json`:**
 ```json
@@ -334,8 +334,8 @@ This gives you flexibility to support both providers that need extra requests fo
      ```
    - This will start the development server and log a "Mobile test url" (e.g., `http://<your-local-ip>:3001`).
 
-2. **Configure the Airfllix App for Local Testing**
-   - Open your Airfllix app project.
+2. **Configure the Airflix App for Local Testing**
+   - Open your Airflix app project.
    - Go to `src/lib/services/ExtensionManager.ts`.
    - Set the following variables in class ExtensionManager:
      ```ts
@@ -345,7 +345,7 @@ This gives you flexibility to support both providers that need extra requests fo
    - This tells the app to use your local providers for testing.
 
 3. **Network Requirement**
-   - Make sure both your development machine (running the dev server) and your mobile device (running the Airfllix app) are on the same network.
+   - Make sure both your development machine (running the dev server) and your mobile device (running the Airflix app) are on the same network.
 
 4. **Test in the App**
    - App will now use your local provider code for all requests.

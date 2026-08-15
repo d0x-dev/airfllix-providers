@@ -1,1 +1,1 @@
-export { getStream } from "../airfllix/stream";
+export { getStream } from "../airflix/stream";

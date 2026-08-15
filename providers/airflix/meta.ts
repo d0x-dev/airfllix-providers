@@ -50,7 +50,7 @@ export const getMeta = async ({
 }): Promise<Info> => {
   try {
     const { axios, cheerio } = providerContext;
-    const currentBaseUrl = await getBaseUrl("airfllix");
+    const currentBaseUrl = await getBaseUrl("airflix");
     const url = new URL(link, `${currentBaseUrl}/`).href;
     console.log("url", url);
     const baseUrl = url.split("/").slice(0, 3).join("/");

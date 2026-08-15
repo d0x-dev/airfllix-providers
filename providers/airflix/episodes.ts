@@ -55,6 +55,6 @@ export const getEpisodes = async function ({
     );
     return enrichEpisodes(episodes, cinemeta.videos || [], context.season);
   } catch (err) {
-    throwProviderError("airfllix", "episodes", err);
+    throwProviderError("airflix", "episodes", err);
   }
 };
